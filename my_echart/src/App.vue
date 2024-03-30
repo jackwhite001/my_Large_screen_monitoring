@@ -5,7 +5,8 @@
 
 <style>
 body {
-    background: url('~@/assets/wallhaven-dg.png') top center no-repeat;
+    background: url('~@/assets/wallhaven.png') top center no-repeat;
+    background-color: rgba(154, 155, 197, 0.5);
 }
 * {
     margin: 0;

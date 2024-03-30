@@ -27,6 +27,14 @@ onMounted(() => {
                         focus: 'self',
                     },
                 },
+                zoom: 1.2, //视觉比例大小,1.2即为原有大小的1.2倍
+            },
+            // 位置调整
+            grid: {
+                left: '10%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: 'true',
             },
             // 散点图设置
             tooltip: {

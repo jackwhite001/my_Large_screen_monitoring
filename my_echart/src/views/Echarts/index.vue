@@ -43,7 +43,7 @@ provide('echarts', echarts);
 
 <style lang="less" scoped>
 header {
-    height: 1rem;
+    height: 0.8rem;
     width: 100%;
     background-color: rgba(0, 0, 255, 0.2);
     // 标题文字样式
@@ -60,9 +60,9 @@ header {
     min-width: 1200px;
     max-width: 2048px;
     margin: 0 auto;
-    padding: 0.625rem 0.625rem 0;
-    height: 800px;
-    background-color: gray;
+    padding: 0.125rem 0.25rem 0;
+    height: 700px;
+    // background-color: gray;
     display: flex;
     // 设置三部分样式
     .itemLeft,
@@ -70,11 +70,13 @@ header {
         flex: 3;
     }
     .itemCenter {
-        flex: 5;
-        height: 10.5rem;
-        border: 1px solid blue;
+        flex: 4;
+        height: 9.125rem;
+        border: 1px solid #5a87c1;
+        box-shadow: 2px 2px #5490de;
+        background-color: rgba(115, 94, 208, 0.3);
         padding: 0.125rem;
-        margin: 0.25rem;
+        margin: 0.125rem;
     }
 }
 </style>

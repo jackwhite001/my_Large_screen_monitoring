@@ -25,17 +25,29 @@ let options = reactive({
     },
     xAxis: {
         type: 'value',
+        // 设置轴上字体颜色
+        axisLine: {
+            lineStyle: {
+                color: '#fff',
+            },
+        },
     },
     yAxis: {
         type: 'category',
         data: [],
+        // 设置轴上字体颜色
+        axisLine: {
+            lineStyle: {
+                color: '#fff',
+            },
+        },
     },
     series: [
         {
             data: [],
             type: 'bar',
             itemStyle: {
-                BorderRadius: [0, 20, 20, 0],
+                barBorderRadius: [0, 10, 10, 0],
                 color: new $echarts.graphic.LinearGradient(0, 0, 1, 0, [
                     {
                         offset: 0,
@@ -76,7 +88,7 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .chart {
-    height: 4.5rem;
+    height: 4rem;
 }
 h2 {
     height: 0.5rem;

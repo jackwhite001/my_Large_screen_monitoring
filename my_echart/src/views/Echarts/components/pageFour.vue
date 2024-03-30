@@ -115,7 +115,7 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .chart {
-    height: 4.5rem;
+    height: 4rem;
 }
 h2 {
     height: 0.5rem;
