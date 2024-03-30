@@ -94,6 +94,89 @@ onMounted(() => {
 });
 ```
 
+堆叠图形赋值，series 多数据赋值采用 forEach循环遍历 
+
+优点：
+
+1、将数据自动赋值 
+
+2、抽取公共样式 自动加入，提高代码复用 
+
+```js {.line-numbers}
+// 抽取options中 series的公共部分
+let publicSets = {
+    // 线条平滑效果，变成1曲线图
+    smooth: true,
+    showSymbol: false,
+    // 数据堆叠
+    stack: 'total',
+    // 设置线段样式，线条宽度
+    lineStyle: {
+        width: 0,
+    },
+    // 选中高亮
+    emphasis: {
+        // 只选中 选中内容高亮
+        focus: 'series',
+    },
+};
+// options设置
+let options = reactive({
+    legend: {
+        top: 'bottom',
+    },
+    // 提示气泡
+    tooltip: {
+        show: true,
+    },
+    xAxis: {
+        type: 'category',
+        data: [],
+    },
+    yAxis: {
+        type: 'value',
+    },
+    series: [
+        {
+            name: '服饰',
+            type: 'bar',
+            data: [],
+        },
+        {
+            name: '数码',
+            type: 'bar',
+            data: [],
+        },
+        {
+            name: '家电',
+            type: 'bar',
+            data: [],
+        },
+        {
+            name: '家居',
+            type: 'bar',
+            data: [],
+        },
+        {
+            name: '日化',
+            type: 'bar',
+            data: [],
+        },
+    ],
+});
+
+const getData = () => {
+    options.xAxis.data = data.data.chartData.day;
+    Object.values(data.data.chartData.num).forEach((item, index) => {
+        // 给每一个series中data赋值
+        options.series[index].data = item;
+        // 提取公共部分 属性放进去
+        Object.assign(options.series[index], publicSets);
+    });
+};
+```
+
+
 前端对axios 进行了二次封装 baseUrl是指向后端服务器地址
 
 指定同一个地址，复用组件
