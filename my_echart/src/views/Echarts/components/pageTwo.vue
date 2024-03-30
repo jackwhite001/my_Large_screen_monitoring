@@ -17,7 +17,7 @@ let publicSets = {
     smooth: true,
     showSymbol: false,
     // 数据堆叠
-    stack: 'Total',
+    stack: 'total',
     // 设置线段样式，线条宽度
     lineStyle: {
         width: 0,
@@ -165,7 +165,6 @@ let options = reactive({
 });
 const getData = () => {
     options.xAxis.data = data.data.chartData.day;
-    console.log(data.data.chartData.num);
     Object.values(data.data.chartData.num).forEach((item, index) => {
         console.log(item);
         // 给每一个series中data赋值
