@@ -275,6 +275,17 @@ onMounted(() => {
 });
 ```
 
+### 前端项目打包 要点
+
+打包项目记得把 router模式改为  createWebHashHistory ,# 后面的数据不参与服务器通信
+
+```js {.line-numbers}
+const router = createRouter({
+    history: createWebHashHistory(process.env.BASE_URL),
+    routes,
+});
+```    
+
 ### 后端express 项目
 
 需要使用 ： npm i express-generator -g 全局安装 
