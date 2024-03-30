@@ -1,7 +1,7 @@
 
 # 大屏监控系统 
 
-b站千锋视频 
+b站千锋视频 ：地址： https://www.bilibili.com/video/BV14u411D7qK?p=1
 
 ## 项目技术栈
 
