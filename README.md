@@ -21,6 +21,8 @@ b站千锋视频
 
 安装flexible 页面自适应： npm i flexible -D 
 
+安装 less-loader 解析less 文件 我的node版本 16.18，vue-cli内置的webpack 4版本，使用less-loader， 6版本 ：npm i less-loader@6 -D 
+
 具体配置看视频
 
 main.js中 引入
